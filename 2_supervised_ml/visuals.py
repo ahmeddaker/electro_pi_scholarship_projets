@@ -1,6 +1,4 @@
-###########################################
-# Suppress matplotlib user warnings
-# Necessary for newer version of matplotlib
+
 import warnings
 warnings.filterwarnings("ignore", category = UserWarning, module = "matplotlib")
 #
@@ -116,7 +114,6 @@ def evaluate(results, accuracy, f1):
     # Aesthetics
     pl.suptitle("Performance Metrics for Three Supervised Learning Models", fontsize = 16, x = 0.63, y = 1.05)
     # Tune the subplot layout
-    # Refer - https://matplotlib.org/3.1.1/api/_as_gen/matplotlib.pyplot.subplots_adjust.html for more details on the arguments
     pl.subplots_adjust(left = 0.125, right = 1.2, bottom = 0.1, top = 0.9, wspace = 0.2, hspace = 0.3)    
     pl.tight_layout()
     pl.show()
